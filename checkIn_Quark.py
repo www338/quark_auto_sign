@@ -1,9 +1,5 @@
 import time
-
 import requests
-
-
-
 
 class Quark:
     def __init__(self, cookie):
