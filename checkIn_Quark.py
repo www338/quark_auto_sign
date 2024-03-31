@@ -1,5 +1,7 @@
-import time
+import argparse
+
 import requests
+
 
 class Quark:
     def __init__(self, cookie):
@@ -64,11 +66,11 @@ class Quark:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--cookie", help="cookie", type=str)
+    args = parser.parse_args()
+    cookie_quark = [args.cookie]
     msg = ""
-    global cookie_quark
-    cookie_quark = [
-        'kkpcwpea=a=a&uc_param_str=einibicppfmivefrlantcunwsssvjbktchnnsnddds&instance=kkpcwp&pf=145&self_service=true&wxUid=AATYKrNYvzjTBIyPAL17b1p6&plain_utdid=ZeB4jQAAACkDAL6Aoc799PXF&system_ver=Windows_NT_10.0.19045&channel_no=pckk%40other_ch&ve=3.1.3&sv=release; CwsSessionId=96f25006-331a-4aee-b995-453ccc5bd4d2; _UP_A4A_11_=wb9631b5e57248b1afc423f34a788952; _UP_30C_6A_=st96362019eyn4cph9a9q5bx3bpcmmzf; _UP_TS_=sg14e16333c3fbb6a22678fcc4774fd865d; _UP_E37_B7_=sg14e16333c3fbb6a22678fcc4774fd865d; _UP_TG_=st96362019eyn4cph9a9q5bx3bpcmmzf; _UP_335_2B_=1; __pus=b663edb09ae8eb228a1016be68b04a2fAATzpMX4li27E/O5BQOexrpVPsgIfVg8o4YeB2Ff06rrWp3bZinmQmuCJscT06AF7DLC6SnkHtQHD4WuyJZR+mrk; __kp=be227e10-e3a3-11ee-9d1a-cba7ae59e94b; __kps=AATYKrNYvzjTBIyPAL17b1p6; __ktd=KgaBQgqAssNila/5VSt7wQ==; __uid=AATYKrNYvzjTBIyPAL17b1p6; tfstk=foVHzJf3IJkCOqKnlOcCsSt20uXtdHGSmud-2bnPQco6pDh8zbRz2zhKUMa8j0q8PDPKJD3zqlnswDFLp8YQsoAJ9M6QzQc-aiIAMsUCRbGPDzdFN9xIy4gPwYkE_AFIresAMsUUXHGZriQIWrooU4lr8YkybN0Ib4-z4Dkwbq0ja08-A3_Kr6FC-xnDkkUea7fc6m4EjI4_w2SIDsiHaIPi-Pm48ERya50nL7fGI15np8zjhWEfZCGLoRlZky1HsjzEoknT0sRi_PUa2xw1VIH_j7DbTvTyLPVoxxPEIUdYof3z4Y21mI3n9RD0tJ_Wbyrxx-lQyEjLSx2ihVkwrpSP_dJqqjOS7aFMFLME5VmYEPdVx4o3QQ7GSK6ILVgdDNbMFLME5VmASNvXVvusJiC..; __puus=43d889810005734d93140fa16044f5a6AARgaZ58HZz72Psz0ppJGHBy4bOt7eXFyDdMNHl9Xjp62MX0GhNLlR/tvBKWa5j3rWI7HBe7cvs1Rd7cdy/qb0Be1USjOiSPonxHB0KUdDWe7AUBVHlHB6zkA4843zuhlBWQEyiXa7e5DVngt6X9FliojUDX4YcYP74iouiacfwS8PAH/wUBT3VcETCYRWqdsznl8sSOD7H0pZqAx1mJZyKH']
-
     print("✅检测到共", len(cookie_quark), "个夸克账号\n")
 
     i = 0
@@ -87,4 +89,3 @@ def main():
 
 if __name__ == "__main__":
     main()
- 
