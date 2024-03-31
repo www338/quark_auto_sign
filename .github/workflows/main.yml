@@ -1,0 +1,28 @@
+name: quark_auto_sign
+on:
+  schedule:
+    - cron: 0 16 * * *
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install-python
+        uses: actions/checkout@v4
+      with:
+        python-version: '3.10' 
+
+      - name: install dependencies
+        run: |
+          pip3 install requirements.txt
+
+      - name: sign in
+        run: |
+          python checkIn_Quark.py
+    
+    
+
