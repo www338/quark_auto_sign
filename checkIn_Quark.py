@@ -1,5 +1,5 @@
 import argparse
-
+import send
 import requests
 
 
@@ -85,7 +85,10 @@ def main():
         i += 1
 
     print(msg)
-
+    token = os.getenv('TG_TOKEN')
+    chat_id = os.getenv('TG_CHAT_ID')
+    sender = send.Send(token)
+    sender.tg_send(chat_id, msg)
 
 if __name__ == "__main__":
     main()
