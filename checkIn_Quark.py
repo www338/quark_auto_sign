@@ -3,8 +3,6 @@ import time
 import requests
 
 
-# 测试用环境变量
-# os.environ['COOKIE_QUARK'] = ''
 
 
 class Quark:
@@ -92,22 +90,5 @@ def main():
 
 
 if __name__ == "__main__":
-    while True:
-        # 获取当前时间
-        current_time = time.localtime()
-
-        # 判断是否是每天的 1 点
-        if current_time.tm_hour == 1 and current_time.tm_min == 0:
-            # 执行你想要的操作
-            # 这里可以添加你的代码，用于执行需要在每天 1 点执行的任务
-            print("----------夸克网盘开始尝试签到----------")
-            main()
-            # 等待到达第二天的 1 点
-            time.sleep(86400)  # 24小时的秒数
-            print("----------夸克网盘签到执行完毕----------")
-        else:
-            # 计算距离下一个 1 小时还有多久，并休眠该时间
-            seconds_until_next_hour = 3600 - current_time.tm_min * 60 - current_time.tm_sec
-            print(f"It's not hours yet. Waiting for it...{seconds_until_next_hour}s left.")
-            time.sleep(seconds_until_next_hour)
-p
+    main()
+ 
