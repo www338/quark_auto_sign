@@ -11,8 +11,8 @@ jobs:
   my_job:
     runs-on: ubuntu-latest
     env:
-      TG_CHAT_ID: ${{secrets.CHAT_ID}}
-      TG_TOKEN: ${{secrets.TOKEN}}
+      CHAT_ID: ${{secrets.CHAT_ID}}
+      TOKEN: ${{secrets.TOKEN}}
     steps:
       - name: install-python
         uses: actions/checkout@v4
