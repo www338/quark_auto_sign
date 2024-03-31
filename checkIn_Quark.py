@@ -1,7 +1,7 @@
 import argparse
 import send
 import requests
-
+import os
 
 class Quark:
     def __init__(self, cookie):
@@ -85,8 +85,8 @@ def main():
         i += 1
 
     print(msg)
-    token = os.getenv('TG_TOKEN')
-    chat_id = os.getenv('TG_CHAT_ID')
+    token = os.getenv('TOKEN')
+    chat_id = os.getenv('CHAT_ID')
     sender = send.Send(token)
     sender.tg_send(chat_id, msg)
 
