@@ -20,7 +20,7 @@ jobs:
 
       - name: sign in
         run: |
-          python checkIn_Quark.py
+          python checkIn_Quark.py --cookie ${{vars.COOKIE}}
     
     
 
