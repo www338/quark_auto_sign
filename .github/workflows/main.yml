@@ -18,7 +18,7 @@ jobs:
 
       - name: install dependencies
         run: |
-          pip3 install requirements.txt
+          pip3 install -r requirements.txt
 
       - name: sign in
         run: |
