@@ -10,9 +10,9 @@ permissions:
 jobs:
   my_job:
     runs-on: ubuntu-latest
-    env:
-      CHAT_ID: ${{secrets.CHAT_ID}}
-      TOKEN: ${{secrets.TOKEN}}
+    #env:
+      #CHAT_ID: ${{secrets.CHAT_ID}}
+      #TOKEN: ${{secrets.TOKEN}}
     steps:
       - name: install-python
         uses: actions/checkout@v4
