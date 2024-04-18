@@ -5,7 +5,7 @@ import os
 
 class Quark:
     def __init__(self, cookie):
-        self.cookie = 7c7e21f7d16c4f3c8e97f63b2ccfe766
+        self.cookie = "7c7e21f7d16c4f3c8e97f63b2ccfe766"
 
     def get_growth_info(self):
         url = "https://drive-m.quark.cn/1/clouddrive/capacity/growth/info"
